@@ -15,8 +15,7 @@ pipeline {
 
         stage('Create Tomcat Docker Image'){
             steps {
-                bat "pwd"
-                bat "ls -a"
+                bat "cd"
                 bat "docker build . -t tomcatsamplewebapp:${env.BUILD_ID}"
             }
         }
